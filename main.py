@@ -29,7 +29,7 @@ async def get_clientes():
     return response
 
 @app.get("/produtos")
-async def get_clientes():
+async def get_produtos():
     produtos = produto_repo.obter_todos()
     response = templates.TemplateResponse("produtos.html", {"request": {}, "produtos": produtos})
     return response
